@@ -34,7 +34,7 @@ if (isset($_POST["send"])){
         $error .= 'email is not valid!<br>';
         $email_b = true;
     }
-    if ($name_b && $email_b){
+    if (!isset($name_b) && !isset($email_b)){
         $name = "";
         $email = "";
     }
